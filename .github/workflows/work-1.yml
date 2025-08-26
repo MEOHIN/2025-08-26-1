@@ -11,3 +11,7 @@ jobs:
         run: echo "Hi"
       - name: sayHello
         run: echo "${{ github.actor }}"
+      - uses: actions/checkout@v4
+      - uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secretes.GITHUB_TOKEN }}
